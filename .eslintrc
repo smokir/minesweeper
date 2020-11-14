@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2019,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "object-curly-spacing": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "react/jsx-tag-spacing": ["error", {"beforeSelfClosing": "never"}]
+  },
+  "overrides": [{
+    "files": [
+      "*.ts",
+      "*.tsx"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ]
+  }]
+}
